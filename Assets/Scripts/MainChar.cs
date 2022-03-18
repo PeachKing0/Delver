@@ -19,6 +19,13 @@ public class Stats
         if(randomize)
         {
             //Randomize stats here
+            int[] stats = new int[4];
+            for (int i = 0; i < 4; i++)
+                stats[i] = Dice.RollDice(1, 6);
+            SetStr(stats[0]);
+            SetVit(stats[1]);
+            SetDex(stats[2]);
+            SetWis(stats[3]);
         } 
         //If not then they remain zero-equivalent
     }
@@ -110,7 +117,7 @@ public class Stats
 public class MainChar : GameChar
 {
     //All GameChar fields are inherited (name, loc, etc.)
-    public Stats stats = new Stats(false);
+    public Stats stats = new Stats(true);
 
     // Start is called before the first frame update
     void Start()
