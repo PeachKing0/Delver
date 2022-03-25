@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
     //To Do:
     public void CharSelect()
     {
-
+        print("***Starting Characterr***");
+        MainChar[] starterChars = {  };
     }
 
     //To DO:

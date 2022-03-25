@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
-    private void Start()
-    {
-        print(RandName(2, 0.5f));
-    }
-
     public static int RollDice(int dice, int sides)
     {
         int sum = 0;
@@ -78,5 +73,16 @@ public class Dice : MonoBehaviour
             return GetRandToken(hardCon);
         else
             return "ERROR"; //If name contains "ERROR" then something went wrong
+    }
+
+    public static MainChar GetRandChar()
+    {
+        int type = Dice.RollDice(1, 10);
+        if (type < 5)
+            return new StrChar();
+        else if (type < 8)
+            return new DexChar();
+        else
+            return new SpellChar();
     }
 }
