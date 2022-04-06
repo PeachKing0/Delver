@@ -27,7 +27,7 @@ public class Room : MonoBehaviour
     }
 
     //ToString mainly used for minimap
-    public string toString()
+    override public string ToString()
     {
         string txt = "[";
         for (int i = 0; i < size; i++)

@@ -8,7 +8,7 @@ public class SpellChar : MainChar, Combatant
         : base() //Equivalent to super(); | Calls parent constructor
     {
         //Generate name and gold
-        name = Dice.RandName(Dice.RollDice(1, 3) + 1, 0.3f);
+        name = Dice.RandName(Dice.RollDice(1, 1), 0.3f);
         gold = Dice.RollDice(10, 12);
 
         //Boost respective stats, then generated select sub-class

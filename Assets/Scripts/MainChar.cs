@@ -117,19 +117,30 @@ public class Stats
 public class MainChar : GameChar
 {
     //All GameChar fields are inherited (name, loc, etc.)
-    public Stats stats = new Stats(true);
+    public Stats stats;
 
-    // Start is called before the first frame update
-    void Start()
+    public MainChar()
     {
-
+        stats = new Stats(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    //Other MainChar stuff to be added
+
+    public void SetEqualTo(MainChar other)
     {
-        
+        this.stats.SetXp(other.stats.GetXp());
+        this.stats.SetStr(other.stats.GetStr());
+        this.stats.SetDex(other.stats.GetDex());
+        this.stats.SetVit(other.stats.GetVit());
+        this.stats.SetWis(other.stats.GetWis());
+        this.stats.SetArmorRank(other.stats.GetArmorRank());
+        this.stats.SetWeapRank(other.stats.GetWeapRank());
+        this.name = other.name;
+        this.loc = other.loc;
+        this.charType = other.charType;
+        this.level = other.level;
+        this.gold = other.gold;
+        this.maxHp = other.maxHp;
+        this.curHp = other.curHp;
     }
-
-
 }

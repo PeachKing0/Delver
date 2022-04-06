@@ -5,6 +5,7 @@ using UnityEngine;
 public class DexChar : MainChar
 {
     public DexChar()
+        : base()
     {
         //Generate name aned gold
         name = Dice.RandName(Dice.RollDice(1, 2) + 1, 0.5f);
@@ -16,7 +17,7 @@ public class DexChar : MainChar
         charType = Dice.GetRandToken(new string[] { "Rogue", "Ranger" });
 
         //Sub-Class specific benefits
-        if (charType.Equals("Rougue"))
+        if (charType.Equals("Rogue"))
         {
             stats.SetArmorRank(1);
             stats.SetWeapRank(2);

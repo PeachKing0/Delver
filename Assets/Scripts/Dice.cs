@@ -8,7 +8,7 @@ public class Dice : MonoBehaviour
     {
         int sum = 0;
         for (int i = 0; i < dice; i++)
-            sum += Random.Range(1, 6) + 1;
+            sum += Random.Range(0, sides) + 1;
         return sum;
     }
 
@@ -30,7 +30,6 @@ public class Dice : MonoBehaviour
         //runs once per syyable
         for (int i = 0; i < len; i++)
         {
-            print(name);
             //80% of the time, starts with con
             if (Random.Range(0f, 1f) < 0.8f)
             {

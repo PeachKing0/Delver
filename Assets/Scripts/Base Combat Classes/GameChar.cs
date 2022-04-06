@@ -9,4 +9,9 @@ public abstract class GameChar : MonoBehaviour
     public int gold; //Spending money in MainChar, reward in Monster
     public int maxHp;
     public int curHp;
+
+    override public string ToString()
+    {
+        return name + " | " + charType + " | " + gold;
+    }
 }
