@@ -74,7 +74,7 @@ public class Dice : MonoBehaviour
             return "ERROR"; //If name contains "ERROR" then something went wrong
     }
 
-    public static MainChar GetRandChar()
+    /*public static MainChar GetRandChar()
     {
         int type = Dice.RollDice(1, 10);
         if (type < 5)
@@ -83,5 +83,5 @@ public class Dice : MonoBehaviour
             return new DexChar();
         else
             return new SpellChar();
-    }
+    }*/
 }
