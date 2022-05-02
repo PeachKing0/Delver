@@ -806,6 +806,9 @@ MonoBehaviour:
   CharPrefab: {fileID: 4638312246776039795, guid: 6c1ddf0176fe1b24ea62f59aaee9e9e7, type: 3}
   objPlayer: {fileID: 0}
   objParty: []
+  player: {fileID: 0}
+  party: []
+  partyInd: 0
   dungs: []
 --- !u!4 &826985023
 Transform:
